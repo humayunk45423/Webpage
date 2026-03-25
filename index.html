@@ -28,10 +28,6 @@ transition:0.3s;
 .btn:hover { transform:translateY(-5px) scale(1.05); }
 
 
-
-
-
-
 .glass {
   backdrop-filter: blur(18px);
   background: rgba(255,255,255,0.05);
@@ -96,15 +92,19 @@ radial-gradient(circle at 80% 70%, rgba(0,0,0,0.05), transparent 40%),
 radial-gradient(circle at 50% 50%, rgba(59,130,246,0.08), transparent 60%);
 }
 
-/* ANIMATION removed here*/
+/* ANIMATION removed and replilished and reenter here*/
 .fade-up {
-opacity:0;
-transform:translateY(0px);
-transition:all 0.8s ease;
+  opacity: 0;
+  /* Reduced from 50px to 20px for a subtler feel */
+  transform: translateY(60px); 
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .fade-up.show {
 opacity:1;
 transform:translateY(0);
+}
+section:first-of-type.fade-up {
+  transform: translateY(0); /* Start at 0, no rising */
 }
 
 /* PROFILE */
