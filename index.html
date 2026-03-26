@@ -109,10 +109,12 @@ section:first-of-type.fade-up {
 
 /* PROFILE */
 .profile-img {
-width:260px;
-height:260px;
+width: clamp(160px, 25vw, 260px);
+height: clamp(160px, 25vw, 260px);
+max-width: 60vh;
+max-height: 60vh;
 border-radius:50%;
-object-fit:cover;
+object-fit:top;
 border:4px solid #FFD700;
 box-shadow:0 0 25px rgba(255,215,0,0.3);
 }
@@ -176,33 +178,65 @@ ul { list-style:disc; padding-left:20px; }
 </header>
 
 <!-- HERO + ABOUT -->
-<section class="min-h-screen flex items-center px-6 fade-up">
+<!--<section class="min-h-screen flex items-center px-6 fade-up">
 <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto w-full items-center">
 
-<div>
+<div class="text-center md:text-left flex flex-col items-center md:items-start order-2 md:order-1">
 
-<h2 class="text-3xl font-bold accent">Assalamu Alaikum (Greetings)!</h2>
-<h1 class="text-5xl font-bold mb-4">I'm Humayoun Kobir</h1>
+<h2 class="font-bold accent" style="font-size:clamp(1.2rem, 3vw, 1.9rem);margin-top: -5px; ">Assalamu Alaikum (Greetings)!</h2>
+<h1 class="font-bold mb-4" style="font-size:clamp(1.8rem, 5vw, 2.8rem);margin-top: -5px; ">I'm Humayoun Kobir</h1>
 
 <div id="typing" class="text-xl mb-4 accent h-6" style="font-weight:500; font-size:1.5rem; letter-spacing:1px; display:inline-block;"></div>
+<div id="typing" class="mb-4 accent h-4"
+style="font-weight:500; font-size:clamp(1rem, 2.5vw, 1.5rem); letter-spacing:1px; margin-top: -15px;;">
+</div>
 
-
-<p class="about-text mb-6">
+<p class="about-text mb-6" style="font-size:clamp(0.8rem, 5vw, 0.2rem);margin-top: 15px;o"></p>
 I am a Diploma Engineer in Computer Science focused on smart strategies and efficiency. Skilled in Graphic Design, 3D Modeling, Data Entry, and problem solving. Currently preparing for DUET while working on real-world projects and freelancing.
 </p>
-
+<br>
 <div class="flex gap-4 flex-wrap">
 <a href="#services" class="btn btn-dark">Services</a>
 <a href="#projects" class="btn btn-dark">Projects</a>
 <a href="#contact" class="btn btn-dark">Contact</a>
 </div>
+
 </div>
 
-<div class="flex justify-center">
+<div class="flex justify-center order-1 md:order-2 mb-6 md:mb-0">
 <img src="https://i.postimg.cc/NjZ9R8Z4/refined.png" class="profile-img">
 </div>
-
 </div>
+</section>-->
+
+<section class="min-h-screen flex items-center px-6 fade-up">
+  <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto w-full items-center">
+
+    <div class="text-center md:text-left flex flex-col items-center md:items-start order-2 md:order-1">
+      
+      <h2 class="font-bold accent" style="font-size:clamp(1.2rem, 3vw, 1.8rem); margin-bottom: -0.1rem;">Assalamu Alaikum (Greetings)!</h2>
+      
+      <h1 class="font-bold mb-2" style="font-size:clamp(1.8rem, 5vw, 2.7rem);">I'm Humayoun Kobir</h1>
+
+      <div id="typing" class="accent" 
+           style="font-weight:500; font-size:clamp(1.1rem, 2.5vw, 1.5rem); letter-spacing:1px; min-height: 1.6rem; margin-bottom: 0.5rem;">
+      </div>
+
+      <p class="about-text mb-4" style="font-size:clamp(0.9rem, 2vw, 1.1rem); line-height: 1.6;">
+        I am a Diploma Engineer in Computer Science focused on smart strategies and efficiency. Skilled in Graphic Design, 3D Modeling, Data Entry, and problem solving. Currently preparing for DUET while working on real-world projects and freelancing.
+      </p>
+
+      <div class="flex gap-4 flex-wrap">
+        <a href="#services" class="btn btn-dark">Services</a>
+        <a href="#projects" class="btn btn-dark">Projects</a>
+        <a href="#contact" class="btn btn-dark">Contact</a>
+      </div>
+    </div>
+
+    <div class="flex justify-center order-1 md:order-2 mb-6 md:mb-0">
+      <img src="https://i.postimg.cc/NjZ9R8Z4/refined.png" class="profile-img">
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
@@ -349,19 +383,26 @@ I am a Diploma Engineer in Computer Science focused on smart strategies and effi
 <a href="https://stackoverflow.com/users/20905785" target="_blank" class="glass social-card"><i class="fab fa-stack-overflow text-3xl"></i><p>StackOverflow</p></a>
 <a href="https://twitch.tv/humayunk45423" target="_blank" class="glass social-card"><i class="fab fa-twitch text-3xl"></i><p>Twitch</p></a>
 <a href="https://www.upwork.com/freelancers/~019f94538da41f401d" target="_blank" class="glass social-card"><i class="fab fa-upwork text-3xl"></i><p>Upwork</p></a>
-<a href="https://muslimbangla.com/quran" target="_blank" class="glass social-card"><i class="fas fa-book text-3xl"></i><p>Quran</p></a>
+<a href="https://muslimbangla.com/quran" target="_blank" class="glass social-card"><i class="fas fa-book text-3xl"></i><p>Read Quran</p></a>
 <a href="https://wa.me/8801721445207" target="_blank" class="glass social-card"><i class="fab fa-whatsapp text-3xl"></i><p>WhatsApp</p></a>
-<a href="https://drive.google.com/drive/folders/13VIzyy7N3K6mcx4eBnc7XTe4E-SxVGEG" target="_blank" class="glass social-card"><i class="fas fa-mosque text-3xl"></i><p>Dawah Files</p></a>
+<a href="https://drive.google.com/drive/folders/13VIzyy7N3K6mcx4eBnc7XTe4E-SxVGEG" target="_blank" class="glass social-card"><i class="fas fa-mosque text-3xl"></i><p>Dawah/Design Files</p></a>
 <a href="https://drive.google.com/drive/folders/1G07OIOtE6cf6giihhwy2U-Z0rHOE3v8m?usp=sharing" target="_blank" class="glass social-card"><i class="fas fa-folder-open text-3xl"></i><p>Important Files</p></a>
 </div>
 
-<a href="mailto:humayunk45423@gmail.com" class="btn btn-dark mt-10 inline-block">Email Me</a>
+<section class="min-h-fit flex flex-col items-center px-6 pt-10 pb-4 fade-up">
+  
+  
+    <a href="mailto:humayunk45423@gmail.com" class="btn btn-dark inline-block">Email Me</a>
+    <br>
+    <a href="javascript:window.scrollTo({top:0,behavior:'smooth'});" class="btn btn-dark inline-block">Goto Top</a>
+ 
 
 </section>
 
-<footer class="text-center py-6 text-gray-500">
-© 2026 Portfolio | Built with 💙 by Humayoun Kobir
+<footer class="text-center pt-10 pb-0 text-gray-500" style="font-size: 0.85rem;">
+  © 2026 Portfolio | Built with 💙 by Humayoun Kobir
 </footer>
+
 
 <script>
 // TOGGLE
