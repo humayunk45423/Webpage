@@ -17,6 +17,25 @@ body { transition:0.4s; font-family:'Segoe UI'; margin:0; }
 .light-mode .accent { color:#3b82f6; }
 
 /* BUTTON */
+.btn-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally */
+    gap: 10px;
+    
+    /* Size and Color */
+    width: 160px;            /* Forces both buttons to be the same width */
+    height: 45px;            /* Forces both buttons to be the same height */
+    background-color: #FFD700; 
+    color: #000;             /* Black text for better contrast on gold */
+    
+    /* Styling */
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: transform 0.2s; /* Smooth effect when clicking */
+}
 .btn {
 padding:10px 15px;
 border-radius:8px;
@@ -392,18 +411,15 @@ I am a Diploma Engineer in Computer Science focused on smart strategies and effi
 <section class="min-h-fit flex flex-col items-center px-6 pt-10 pb-4 fade-up">
   
   
-    <a href="mailto:humayunk45423@gmail.com" class="btn btn-dark inline-block">
-    <i class="fas fa-envelope"></i>
-    <p>Email Me</p>
-</a>
-
+     <a href="mailto:humayunk45423@gmail.com" class="btn-custom">
+        <i class="fas fa-envelope"></i>
+        <span>Email Me</span>
+    </a>
 <br>
-
-<a href="javascript:window.scrollTo({top:0,behavior:'smooth'});" class="btn btn-dark inline-block">
-    <i class="fas fa-arrow-up"></i>
-    <p>Goto top</p>
-</a>
-
+    <a href="javascript:window.scrollTo({top:0,behavior:'smooth'});" class="btn-custom">
+        <i class="fas fa-arrow-up"></i>
+        <span>Goto top</span>
+    </a>
 </section>
 
 <footer class="text-center pt-10 pb-0 text-gray-500" style="font-size: 0.85rem;">
