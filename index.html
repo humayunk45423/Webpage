@@ -28,11 +28,14 @@ body { transition:0.4s; font-family:'Segoe UI'; margin:0; }
 
 .button-stack {
     display: flex;
-    flex-direction: column; /* Stacks the Email button above the Top button */
-    align-items: center;    /* Centers them horizontally */
+    flex-direction: column; 
+    align-items: center;    
     justify-content: center;
-    gap: 15px;             /* Creates clean space between the two buttons */
-    margin: 30px 0;         /* Adds space above and below the button group */
+    gap: 20px;              /* Slightly tighter gap between the two buttons */
+    
+    /* THE FIX: Pulls the buttons closer to the top content */
+    margin-top: -40px;      /* Increased negative margin to pull UP more */
+    margin-bottom: 40px;    /* Space only for the bottom */
 }
 
 .btn-custom {
@@ -316,7 +319,7 @@ ul { list-style:disc; padding-left:20px; }
 <a href="https://drive.google.com/drive/folders/13VIzyy7N3K6mcx4eBnc7XTe4E-SxVGEG" target="_blank" class="glass social-card"><i class="fas fa-mosque text-3xl"></i><p>Dawah/Design Files</p></a>
 <a href="https://drive.google.com/drive/folders/1G07OIOtE6cf6giihhwy2U-Z0rHOE3v8m?usp=sharing" target="_blank" class="glass social-card"><i class="fas fa-folder-open text-3xl"></i><p>Important Files</p></a>
 </div>
-
+</section>
 
 <div class="button-stack">
     <a href="mailto:humayunk45423@gmail.com" class="btn-custom">
@@ -330,10 +333,10 @@ ul { list-style:disc; padding-left:20px; }
     </a>
 </div>
 
-<footer class="text-center mt-20 text-gray-500" style="font-size: 0.85rem;">
+<footer class="text-center pt--15 pb-5 text-gray-500" style="font-size: 0.85rem;">
   © 2026 Portfolio | Built with 💙 by Humayoun Kobir
 </footer>
-</section>
+
 
 <script>
 function toggleMode(){
